@@ -15,8 +15,8 @@ try:        #TENTANDO FECHAR O PROGRAMA
                 BP.set_motor_power(BP.PORT_B + BP.PORT_C, 100) # O MOTOR VAI ANDAR PRA FRENTE 
                  
             elif value < 10:  #E SE O O VALOR DO SENSOR UTRASSONICO FOR MENOR QUE 10
-                BP.set_motor_power(BP.PORT_B + BP.PORT_C, 50) #O MOTOR VAI PARAR
-                if value2 == 1: #se o sensor de toque for precionado
+                BP.set_motor_power(BP.PORT_B + BP.PORT_C, 50) #O motor reduz a velocidade em 50%
+                if value2 == 1: #Caso o sensor de toque seja precionado
                     BP.set_motor_power(BP.PORT_B + BP.PORT_C, 0)
                     time.sleep(2)
                     BP.set_motor_power(BP.PORT_B + BP.PORT_C, -100)#os motores irão parar
