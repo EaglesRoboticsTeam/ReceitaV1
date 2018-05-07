@@ -1,3 +1,4 @@
+#versão 0.2.5
 import time
 import brickpi3
 
@@ -11,20 +12,18 @@ try:
     while True:
         try:
             value = BP.get_sensor(BP.PORT_1)#value recebe valores do sensor da porta 1
-            print(color[value])
             
-            if value == "Black":
-                BP.set_motor_power(BP.PORT_B, 0)
-                BP.set_motor_power(BP.PORT_A, 100)    
-                if value == "White":
-                    BP.set_motor_power(BP.PORT_A, 0)
-                    BP.set_motor_power(BP.PORT_B, 100)
-                else:
-                    pass
+            if color[value] == "Black":
+                time.sleep(0.001)
+                print("Motor A 100")
+                
             else:
-                pass
-            
+                time.sleep(0.001)
+                print("Motor B 100")
+                
         except brickpi3.SensorError as error: #CASO O SENSOR DEMORE PARA INICIALIZAR O SENSOR ERRO SERVE PARA 
             print(error)
 except KeyboardInterrupt: #FECHANDO O PROGRAMA
     BP.reset_all()
+
+
