@@ -1,3 +1,4 @@
+#wyznawca linii dla rapbarry i brick pi z brazylijskiej Brazylii
 #versão 0.2.5
 import time
 import brickpi3
