@@ -14,8 +14,10 @@ try:
             print(color[value])
             
             if value == "Black":
-                BP.set_motor_power(BP.PORT_A, 100)
+                BP.set_motor_power(BP.PORT_B, 0)
+                BP.set_motor_power(BP.PORT_A, 100)    
                 if value == "White":
+                    BP.set_motor_power(BP.PORT_A, 0)
                     BP.set_motor_power(BP.PORT_B, 100)
                 else:
                     pass
